@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------
+# Site configuration
+# ---------------------------------------------------------------------------
+# Canonical custom domain used by GitHub Pages, the sitemap, and SEO metadata.
+url: "https://dboychev.com"
+baseurl: ""
+repository_url: "https://github.com/delyan-boychev/delyan-boychev.github.io"
+
+# SEO core
+title: "Delyan Boychev"
+name: "Delyan Boychev"
+description: >-
+  Delyan Boychev is a Computer Science bachelor's student at Sofia University,
+  an INSAIT research scholar, and an NLP research intern at Graphwise in Sofia,
+  Bulgaria. His work spans vision-language models, remote sensing, synthetic
+  image detection, and interpretability; previously, he was a Quant ML intern
+  at Man Group.
+lang: en
+
+author:
+  name: "Delyan Boychev"
+
+# Contact / profiles (used on the page and in SEO metadata)
+profiles:
+  email: "delyan.boychev@insait.ai"
+  github: "https://github.com/delyan-boychev"
+  github_handle: "delyan-boychev"
+  linkedin: "https://www.linkedin.com/in/d-boychev/"
+  scholar: "https://scholar.google.com/citations?user=_uql_SsAAAAJ&hl=en"
+  insait: "https://insait.ai/delyan-boychev/"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Bing site-verification code: uncomment and fill in once you own the domain
+# (see README).
+# bing_verification:
+
+# Default layout for all content
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Jekyll internals
+permalink: pretty
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - preview.sh
+  - preview-static.sh
+  - vendor

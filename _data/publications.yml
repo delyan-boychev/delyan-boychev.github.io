@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------
+# Publications — auto-sorted by year (newest first).
+# Required fields: id, title, authors, year, type, venue, summary, links
+# Optional fields: image, image_alt
+# `id` must be unique and URL-safe; research projects use it for internal links.
+# To add a paper: copy one block, fill it in. Done.
+# ---------------------------------------------------------------------------
+
+- id: "osmda"
+  title: "OSMDA: OpenStreetMap-based Domain Adaptation for Remote Sensing VLMs"
+  authors: "Stefan Maria Ailuro, Mario Markov, Mohammad Mahdi, Delyan Boychev, Luc Van Gool, Danda Pani Paudel"
+  year: 2026
+  type: "Preprint"
+  venue: "arXiv"
+  link: "https://arxiv.org/abs/2603.11804"
+  summary: "A self-contained adaptation framework that uses OpenStreetMap data to generate geographic supervision without manual labels or a stronger external teacher."
+  image: "/assets/img/publications/osmda.webp"
+  image_alt: "Overview of the OSMDA method and evaluation results"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2603.11804"
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2603.11804"
+
+- id: "imaginet"
+  title: "ImagiNet: A Multi-Content Benchmark for Synthetic Image Detection"
+  authors: "Delyan Boychev, Radostin Cholakov"
+  year: 2024
+  type: "Workshop paper"
+  venue: "AAAI 2025 Workshop on Datasets and Evaluators of AI Safety"
+  link: "https://arxiv.org/abs/2407.20020"
+  summary: "A balanced 200K-image benchmark spanning four content types and multiple open and proprietary generators, with strong contrastive-learning baselines."
+  image: "/assets/img/publications/imaginet.webp"
+  image_alt: "Overview of the ImagiNet synthetic-image detection benchmark"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2407.20020"
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2407.20020"
+
+- id: "interpretability"
+  title: "Interpretable Computer Vision Models through Adversarial Training: Unveiling the Robustness-Interpretability Connection"
+  authors: "Delyan Boychev"
+  year: 2023
+  type: "Preprint"
+  venue: "arXiv"
+  link: "https://arxiv.org/abs/2307.02500"
+  summary: "An empirical study of how adversarial training changes learned representations and makes computer-vision model decisions more interpretable."
+  image: "/assets/img/publications/interpretability.webp"
+  image_alt: "Comparison of interpretability results for standard and adversarially robust computer vision models"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2307.02500"
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2307.02500"

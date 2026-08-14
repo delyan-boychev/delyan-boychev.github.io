@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# Experience — automatically sorted newest first using sort_key.
+# Fields: role, organization, location, start, end, sort_key, links, bullets
+#   Mark an ongoing role with end: "Present"; when it ends, e.g. after
+#   September 2026, change Graphwise to end: "Sep 2026".
+# ---------------------------------------------------------------------------
+
+- role: "NLP Research Intern"
+  organization: "Graphwise"
+  location: "Sofia, Bulgaria"
+  start: "July 2026"
+  end: "Present"
+  sort_key: "9999-99-2026-07"
+  organization_url: "https://graphwise.ai/"
+  bullets:
+    - "Conducting NLP research on extracting and structuring information from text."
+
+- role: "IOAI Lecturer"
+  organization: "Bulgarian IOAI Team"
+  location: "Bulgaria"
+  start: "2025"
+  end: "Present"
+  sort_key: "9999-99-2025-00"
+  organization_url: "https://ioai-official.org/"
+  bullets:
+    - "Lecturing and mentoring students preparing for the International Olympiad in Artificial Intelligence (IOAI)."
+
+- role: "Undergrad Research Scholar"
+  organization: "INSAIT"
+  location: "Sofia, Bulgaria"
+  start: "Oct 2024"
+  end: "Present"
+  sort_key: "9999-99-2024-10"
+  organization_url: "https://insait.ai/"
+  bullets:
+    - "Doing research at INSAIT in the area of Computer Vision — mostly working on 3D vision processing and Vision-Language models."
+
+- role: "Research Intern"
+  organization: "Man Group"
+  location: "Sofia, Bulgaria"
+  start: "July 2025"
+  end: "Sept 2025"
+  sort_key: "2025-09-2025-07"
+  organization_url: "https://www.man.com/"
+  bullets:
+    - "Conducted Quant ML research, focusing on developing and evaluating machine-learning models for systematic trading and signal forecasting."

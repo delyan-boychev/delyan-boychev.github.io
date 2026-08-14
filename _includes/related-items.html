@@ -1,0 +1,20 @@
+{% if include.related.papers or include.related.projects %}
+<div class="related-items">
+  {% if include.related.papers %}
+  <div class="related-group">
+    <span class="related-label">Papers</span>
+    <ul class="item-links" aria-label="Related papers">
+      {% for item in include.related.papers %}<li><a href="#publication-{{ item.id }}">{% include link-icon.html label='Paper' %}<span>{{ item.title }}</span></a></li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if include.related.projects %}
+  <div class="related-group">
+    <span class="related-label">Projects</span>
+    <ul class="item-links" aria-label="Related projects">
+      {% for item in include.related.projects %}<li><a href="#project-{{ item.id }}">{% include link-icon.html label='Project' %}<span>{{ item.title }}</span></a></li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>
+{% endif %}

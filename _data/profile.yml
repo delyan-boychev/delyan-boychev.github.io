@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------
+# Profile — edit anything here, everything else updates automatically.
+# NO phone number, NO date of birth, NO street address are used anywhere.
+# ---------------------------------------------------------------------------
+
+name: "Delyan Boychev"
+title: "CS Bachelor"
+eyebrow: "Computer Vision · Vision-Language Models · NLP"
+
+location: "Sofia, Bulgaria"
+
+intro: >-
+  CS undergraduate and INSAIT research scholar working on vision-language
+  models for satellite imagery and 3D scenes; currently an NLP intern at
+  Graphwise, with a deep interest in aviation safety, originally from
+  Lyaskovets, Bulgaria.
+
+about_me:
+  - >-
+    I am an undergraduate research scholar at <a href="https://insait.ai/">INSAIT</a>
+    and <a href="https://www.uni-sofia.bg/">Sofia University</a>, advised by
+    <a href="https://insait.ai/dr-danda-paudel/">Dr. Danda Paudel</a>, working on
+    remote-sensing vision-language models and spatial reasoning in 3D scenes.
+  - >-
+    I am also an NLP research intern at <a href="https://graphwise.ai/">Graphwise</a>.
+    Previously, I worked on quantitative ML at <a href="https://www.man.com/">Man Group</a>
+    and on synthetic-image detection, adversarial robustness, and interpretability.
+  - >-
+    Outside research, I am interested in aviation safety and aircraft design —
+    especially the Airbus A350. I also follow interesting aircraft on
+    Flightradar24: digitally for now, plane spotting soon.

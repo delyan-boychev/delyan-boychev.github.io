@@ -1,0 +1,226 @@
+---
+title: null
+---
+
+{% assign profile = site.data.profile %}
+{% assign sorted_projects = site.data.projects | sort: 'sort_key' | reverse %}
+{% assign sorted_experience = site.data.experience | sort: 'sort_key' | reverse %}
+{% assign sorted_education = site.data.education | sort: 'sort_key' | reverse %}
+
+<div id="top"></div>
+
+<section class="hero shell" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ profile.eyebrow }}</p>
+    <h1 id="hero-title">{{ profile.name }}</h1>
+    <p class="hero-intro">{% include tldr-mark.html %}{{ profile.intro }}</p>
+
+    <div class="hero-bio">
+      {% for para in profile.about_me %}<p>{{ para }}</p>{% endfor %}
+    </div>
+
+    <ul class="profile-links" aria-label="Profiles and contact">
+      <li><a href="mailto:{{ site.profiles.email }}" rel="me">{% include profile-icon.html name='email' %}<span>Email</span></a></li>
+      <li><a href="{{ site.profiles.github }}" rel="me">{% include profile-icon.html name='github' %}<span>GitHub</span></a></li>
+      <li><a href="{{ site.profiles.linkedin }}" rel="me">{% include profile-icon.html name='linkedin' %}<span>LinkedIn</span></a></li>
+      <li><a href="{{ site.profiles.scholar }}" rel="me">{% include profile-icon.html name='scholar' %}<span>Google Scholar</span></a></li>
+      <li><a href="{{ site.profiles.insait }}" rel="me" aria-label="INSAIT profile">{% include profile-icon.html name='insait' %}</a></li>
+    </ul>
+    <p class="hero-location">{{ profile.location }}</p>
+  </div>
+
+  <figure class="hero-portrait">
+    <img src="{{ '/assets/img/photo.webp' | relative_url }}" alt="Portrait of {{ profile.name }}" width="1024" height="1024">
+  </figure>
+</section>
+
+<div class="work-grid shell">
+  <section id="research" class="work-column" aria-labelledby="research-title">
+    <div class="section-heading">
+      <p class="section-kicker">What I am exploring</p>
+      <h2 id="research-title">Current Research</h2>
+    </div>
+
+    <div class="stack">
+      {% for project in sorted_projects %}
+        {% if project.category == "research" %}
+        <article id="project-{{ project.id }}" class="work-card{% if project.image or project.image_url %} has-media{% endif %}">
+          {% if project.image %}
+          <img class="card-media" src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">
+          {% elsif project.image_url %}
+          <img class="card-media" src="{{ project.image_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">
+          {% endif %}
+          <div class="card-topline">
+            <span>{% if project.organization_url %}<a href="{{ project.organization_url }}">{{ project.org }}</a>{% else %}{{ project.org }}{% endif %}</span>
+            <span>{{ project.start }} — {{ project.end }}</span>
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <p class="card-people">
+            {{ project.collaborators }} · Advised by
+            <a href="{{ project.advisor_link }}">{{ project.advisor }}</a>
+          </p>
+          {% include related-items.html related=project.related %}
+          {% if project.links %}
+          <ul class="item-links" aria-label="Links for {{ project.title | escape }}">
+            {% for link in project.links %}<li><a href="{{ link.url }}">{% include link-icon.html label=link.label %}<span>{{ link.label }}</span></a></li>{% endfor %}
+          </ul>
+          {% endif %}
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="experience" class="work-column" aria-labelledby="experience-title">
+    <div class="section-heading">
+      <p class="section-kicker">Where I have worked</p>
+      <h2 id="experience-title">Experience</h2>
+    </div>
+
+    <div class="timeline">
+      {% for job in sorted_experience %}
+      <article class="timeline-item">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <div class="card-topline">
+          <span>{{ job.start }} — {{ job.end }}</span>
+          <span>{{ job.location }}</span>
+        </div>
+        <h3>{{ job.role }}</h3>
+        <p class="organization"><a href="{{ job.organization_url }}">{% include link-icon.html label='External' %}<span>{{ job.organization }}</span></a></p>
+        {% if job.bullets %}<p>{{ job.bullets.first }}</p>{% endif %}
+        {% include related-items.html related=job.related %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<section id="publications" class="content-section shell" aria-labelledby="publications-title">
+  <div class="section-heading split-heading">
+    <div>
+      <p class="section-kicker">Peer-reviewed work & preprints</p>
+      <h2 id="publications-title">Publications</h2>
+    </div>
+    <a class="heading-link" href="{{ site.profiles.scholar }}">{% include profile-icon.html name='scholar' %}<span>Google Scholar</span></a>
+  </div>
+
+  <div class="publication-list">
+    {% assign publications = site.data.publications | sort: 'year' | reverse %}
+    {% for publication in publications %}
+    <article id="publication-{{ publication.id }}" class="publication">
+      <figure class="publication-media">
+        {% if publication.image %}
+        <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title | escape }}" loading="lazy">
+        {% else %}
+        {% include publication-placeholder.html %}
+        {% endif %}
+      </figure>
+      <div class="publication-body">
+        <div class="publication-meta">
+          <span>{{ publication.year }} · {{ publication.type }} · {{ publication.venue }}</span>
+        </div>
+        <h3>{% if publication.link %}<a href="{{ publication.link }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
+        <p class="authors">{{ publication.authors | replace: 'Delyan Boychev', '<strong>Delyan Boychev</strong>' }}</p>
+        <p class="publication-summary">{{ publication.summary }}</p>
+        {% if publication.links %}
+        <ul class="item-links" aria-label="Links for {{ publication.title | escape }}">
+          {% for link in publication.links %}<li><a href="{{ link.url }}">{% include link-icon.html label=link.label %}<span>{{ link.label }}</span></a></li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects" class="content-section shell" aria-labelledby="projects-title">
+  <div class="section-heading">
+    <p class="section-kicker">Things I have built</p>
+    <h2 id="projects-title">Selected Projects</h2>
+  </div>
+
+  <div class="project-grid">
+    {% for project in sorted_projects %}
+      {% if project.category == "software" %}
+      <article id="project-{{ project.id }}" class="project-card">
+        <div class="project-media-slot{% unless project.image or project.image_url %} is-placeholder{% endunless %}">
+          {% if project.image %}
+            {% if project.primary_url %}<a class="project-media-link fit-{{ project.image_fit | default: 'cover' }}" href="{{ project.primary_url }}">{% endif %}<img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">{% if project.primary_url %}</a>{% endif %}
+          {% elsif project.image_url %}
+            {% if project.primary_url %}<a class="project-media-link fit-{{ project.image_fit | default: 'cover' }}" href="{{ project.primary_url }}">{% endif %}<img src="{{ project.image_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">{% if project.primary_url %}</a>{% endif %}
+          {% else %}
+            {% if project.primary_url %}<a class="project-placeholder" href="{{ project.primary_url }}" aria-label="Open {{ project.title | escape }}">{% include project-placeholder.html %}</a>{% else %}<span class="project-placeholder">{% include project-placeholder.html %}</span>{% endif %}
+          {% endif %}
+        </div>
+        <div class="project-card-body">
+          <div class="card-topline">
+            <span>{{ project.subtitle }}</span>
+            <span>{{ project.year }}</span>
+          </div>
+          <h3>{% if project.primary_url %}<a href="{{ project.primary_url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</h3>
+          <p>{{ project.summary }}</p>
+          {% if project.links %}
+          <ul class="item-links" aria-label="Links for {{ project.title | escape }}">
+            {% for link in project.links %}<li><a href="{{ link.url }}">{% include link-icon.html label=link.label %}<span>{{ link.label }}</span></a></li>{% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="education" class="content-section shell" aria-labelledby="education-title">
+  <div class="section-heading">
+    <p class="section-kicker">Academic background</p>
+    <h2 id="education-title">Education</h2>
+  </div>
+
+  <div class="education-list">
+    {% for item in sorted_education %}
+    <article class="education-item">
+      <div>
+        <h3>{{ item.institution }}</h3>
+        <p>{{ item.degree }}</p>
+        {% if item.links %}
+        <ul class="item-links" aria-label="Institution links">
+          {% for link in item.links %}<li><a href="{{ link.url }}">{% include link-icon.html label=link.label %}<span>{{ link.label }}</span></a></li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <p class="education-meta">{{ item.start }} — {{ item.end }}<br>{{ item.location }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="details-grid shell" aria-label="Additional profile details">
+  <div class="detail-panel">
+    <div class="section-heading compact-heading">
+      <p class="section-kicker">Recognition</p>
+      <h2>Honors & Awards</h2>
+    </div>
+    <ul class="detail-list">
+      {% for honor in site.data.honors %}<li>{{ honor }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <div class="detail-panel">
+    <div class="section-heading compact-heading">
+      <p class="section-kicker">Research & engineering</p>
+      <h2>Expertise</h2>
+    </div>
+    <ul class="expertise-list">
+      {% for skill in site.data.skills %}<li>{{ skill }}</li>{% endfor %}
+    </ul>
+    {% if site.data.testing %}
+    <div class="credentials" aria-label="Language proficiency">
+      <span class="credentials-label">English proficiency</span>
+      {% for test in site.data.testing %}<span>{{ test.name }} · <strong>{{ test.score }}</strong></span>{% endfor %}
+    </div>
+    {% endif %}
+    {% if profile.personal %}<p class="personal-note">{{ profile.personal }}</p>{% endif %}
+  </div>
+</section>
