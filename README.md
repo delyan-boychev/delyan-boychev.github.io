@@ -44,12 +44,11 @@ rebuild automatically while `jekyll serve` is running; otherwise run
 | `_data/publications.yml` | Papers (auto-sorted newest first by `year`) |
 | `_data/projects.yml` | Current research and selected projects (automatically sorted) |
 | `_data/honors.yml` | Honors & awards (order = file order) |
-| `_data/skills.yml` | "Scope of Specialization" list (order = file order) |
-| `_data/testing.yml` | Testing / certifications |
+| `_data/research_interests.yml` | "Research Interests" list (order = file order) |
 
 Publications are sorted by `year`. Education, experience, and projects are
 sorted by `sort_key`: ongoing entries first by newest start date, followed by
-completed entries by newest end date. Honors and skills retain their file order.
+completed entries by newest end date. Honors and research interests retain their file order.
 
 Use `"END-START"`, with each date written as `YYYY-MM`; use `9999-99` as the
 end date for ongoing work. For example:
@@ -90,6 +89,13 @@ It appears automatically at the top of Publications, sorted by year. Every
 entry renders the same metadata line: `year · type · venue`. Use types such as
 `Preprint`, `Conference paper`, or `Workshop paper` and give the canonical
 venue separately.
+
+`Delyan Boychev` in `authors` is always auto-bolded. If any authors share
+equal contribution, mark **every** one of them with a trailing `*`, e.g.
+`"A. Person*, B. Person*, Delyan Boychev"` — this is required whenever equal
+contribution applies, since the page auto-detects the `*` and renders a
+"* Equal contribution" footnote under the author list. Omit the `*` entirely
+when contribution is not equal.
 
 For consistent artwork, use a landscape paper figure when possible (roughly
 `3:2` or `16:10`) and always provide `image_alt`. Images are optional: without

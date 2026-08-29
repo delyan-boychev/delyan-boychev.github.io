@@ -1,4 +1,4 @@
-{% assign siteurl = site.url | append: '/' %}{% assign profiles = site.profiles %}{% assign name = site.name | jsonify %}{% capture same_as %}[{{ profiles.github | jsonify }}, {{ profiles.linkedin | jsonify }}, {{ profiles.scholar | jsonify }}, {{ profiles.insait | jsonify }}]{% endcapture %}{% capture knows_about %}{{ site.data.skills | jsonify }}{% endcapture %}{% capture awards %}{{ site.data.honors | jsonify }}{% endcapture %}
+{% assign siteurl = site.url | append: '/' %}{% assign profiles = site.profiles %}{% assign name = site.name | jsonify %}{% capture same_as %}[{{ profiles.github | jsonify }}, {{ profiles.linkedin | jsonify }}, {{ profiles.scholar | jsonify }}, {{ profiles.insait | jsonify }}]{% endcapture %}{% capture knows_about %}{{ site.data.research_interests | jsonify }}{% endcapture %}{% capture awards %}{{ site.data.honors | jsonify }}{% endcapture %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
