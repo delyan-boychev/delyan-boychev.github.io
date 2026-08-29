@@ -28,6 +28,7 @@ profiles:
   linkedin: "https://www.linkedin.com/in/d-boychev/"
   scholar: "https://scholar.google.com/citations?user=_uql_SsAAAAJ&hl=en"
   insait: "https://insait.ai/delyan-boychev/"
+  cv: "/CV/main.pdf"
 
 plugins:
   - jekyll-sitemap
@@ -53,4 +54,5 @@ exclude:
   - README.md
   - preview.sh
   - preview-static.sh
+  - preview-cv.sh
   - vendor

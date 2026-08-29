@@ -4,3 +4,12 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
+
+# LaTeX build artifacts (CV/main.pdf itself is tracked and linked from the site)
+CV/*.aux
+CV/*.log
+CV/*.out
+CV/*.fls
+CV/*.fdb_latexmk
+CV/*.synctex.gz
+CV/*.toc
