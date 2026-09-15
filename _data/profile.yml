@@ -25,9 +25,9 @@ about_me:
     I am also an NLP research intern at <a href="https://graphwise.ai/">Graphwise</a>.
     Previously, I worked on quantitative ML at <a href="https://www.man.com/">Man Group</a>
     and on synthetic-image detection, adversarial robustness, and interpretability.
-    Alongside that, I build open-source
-    <a href="https://github.com/delyan-boychev/disentangled-flash">Triton GPU kernels</a>
-    for efficient transformer inference.
+    Recently, I started working on GPU kernel programming in
+    <a href="https://triton-lang.org/">Triton</a>, with a first project on
+    efficient transformer inference.
   - >-
     Outside research, I am interested in aviation safety and aircraft design —
     especially the Airbus A350. I also follow interesting aircraft on
