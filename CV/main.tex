@@ -147,7 +147,7 @@
 
 \section{\texorpdfstring{\faSmile}{} About me}
 
-CS undergraduate and INSAIT research scholar working on vision-language models for satellite imagery and 3D scenes, advised by Dr. Danda Paudel. Currently an NLP research intern at Graphwise and an IOAI Lecturer for the Bulgarian IOAI team. Previously a Quant ML research intern at Man Group, and worked on synthetic-image detection, adversarial robustness, and interpretability in computer vision.
+CS undergraduate and INSAIT research scholar working on vision-language models for satellite imagery and 3D scenes, advised by Dr. Danda Paudel. Currently an NLP research intern at Graphwise and an IOAI Lecturer for the Bulgarian IOAI team. Also builds open-source GPU kernels in Triton for efficient transformer inference. Previously a Quant ML research intern at Man Group, and worked on synthetic-image detection, adversarial robustness, and interpretability in computer vision.
 
 \vspace{-3mm}
 %-----------EDUCATION-----------
@@ -173,12 +173,13 @@ CS undergraduate and INSAIT research scholar working on vision-language models f
 \resumeItem{3D Scene Understanding \& Spatial Reasoning}
 \resumeItem{Remote Sensing \& Satellite Imagery}
 \resumeItem{Representation Learning}
+\resumeItem{Efficient Inference \& GPU Kernels}
 \resumeItemListEnd
 \vspace{-3mm}
 \section{\texorpdfstring{\faCode}{} Technical Skills}
 \resumeItemListStart
 \resumeItem{\textbf{Languages:} Python, C++}
-\resumeItem{\textbf{ML/Research:} PyTorch, Hugging Face Transformers}
+\resumeItem{\textbf{ML/Research:} PyTorch, Triton, CUDA, Hugging Face Transformers}
 \resumeItem{\textbf{Data Science:} NumPy, pandas}
 \resumeItem{\textbf{Tools:} Docker, Git, Linux}
 \resumeItemListEnd
@@ -236,6 +237,13 @@ CS undergraduate and INSAIT research scholar working on vision-language models f
 \vspace{-3mm}
 \section{\texorpdfstring{\faFolderOpen}{} Projects}
     \resumeSubHeadingListStart
+      \resumeProjectHeading{\textbf{DisentangledFlash} $|$ \textit{Triton Attention Kernel}}{2026 - Present}{}
+      \resumeItemListStart
+        \resumeItem{An inference-oriented Triton implementation of DeBERTa-v2/v3 disentangled attention, fusing QK, relative-position lookup, online softmax, and PV into a single streaming kernel.}
+        \resumeItem{Never materializes the full attention matrix, lowering both encoder latency and peak GPU memory, with the advantage growing at longer sequence lengths.}
+        \resumeItem{Supports FP16/BF16/FP32, packed unpadded inference, and saved kernel-tuning profiles; released on PyPI under Apache-2.0.}
+        \resumeItem{\href{https://github.com/delyan-boychev/disentangled-flash}{https://github.com/delyan-boychev/disentangled-flash}}
+      \resumeItemListEnd
       \resumeProjectHeading{\textbf{LavBench} $|$ \textit{ML Competition Platform}}{2026 - Present}{}
       \resumeItemListStart
         \resumeItem{A secure, bilingual platform for machine-learning competitions, built for Bulgarian AI Olympiad selection and national contests.}
