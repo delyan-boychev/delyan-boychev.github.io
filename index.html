@@ -119,7 +119,7 @@ title: null
       </figure>
       <div class="publication-body">
         <div class="publication-meta">
-          <span>{{ publication.year }} · {{ publication.type }} · {{ publication.venue }}</span>
+          <span>{{ publication.year }} · {{ publication.type }} · {{ publication.venue }}{% if publication.status %} · {{ publication.status }}{% endif %}</span>
         </div>
         <h3>{% if publication.link %}<a href="{{ publication.link }}">{{ publication.title }}</a>{% else %}{{ publication.title }}{% endif %}</h3>
         <p class="authors">{{ publication.authors | replace: 'Delyan Boychev', '<strong>Delyan Boychev</strong>' }}</p>

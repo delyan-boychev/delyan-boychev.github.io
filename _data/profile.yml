@@ -11,9 +11,9 @@ location: "Sofia, Bulgaria"
 
 intro: >-
   CS undergraduate and INSAIT research scholar working on vision-language
-  models for satellite imagery and 3D scenes; currently an NLP intern at
-  Graphwise, with a deep interest in aviation safety, originally from
-  Lyaskovets, Bulgaria.
+  models for satellite imagery and 3D scenes; previously a Quant ML intern at
+  Man Group and an NLP research intern at Graphwise, with a deep interest in
+  aviation safety, originally from Lyaskovets, Bulgaria.
 
 about_me:
   - >-
@@ -22,12 +22,12 @@ about_me:
     <a href="https://insait.ai/dr-danda-paudel/">Dr. Danda Paudel</a>, working on
     remote-sensing vision-language models and spatial reasoning in 3D scenes.
   - >-
-    I am also an NLP research intern at <a href="https://graphwise.ai/">Graphwise</a>,
-    and recently started working on GPU kernel programming, with a first
-    project on efficient transformer inference. Previously, I worked on
-    quantitative ML at <a href="https://www.man.com/">Man Group</a>. During high
-    school, I worked on synthetic-image detection, adversarial robustness, and
-    interpretability.
+    I recently started working on GPU kernel programming, with a first
+    project on efficient transformer inference. Previously, I was a Quant ML
+    intern at <a href="https://www.man.com/">Man Group</a> and an NLP research
+    intern at <a href="https://graphwise.ai/">Graphwise</a>. During
+    high school, I worked on synthetic-image detection, adversarial robustness,
+    and interpretability.
   - >-
     Outside research, I am interested in aviation safety and aircraft design —
     especially the Airbus A350. For now I follow interesting aircraft on

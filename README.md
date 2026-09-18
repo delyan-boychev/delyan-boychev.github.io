@@ -60,7 +60,10 @@ sort_key: "9999-99-2026-07"       # value used only for sorting
 ```
 
 For year-only dates, use month `00`, such as `2025-00`. Dates in `start` and
-`end` are displayed exactly as written.
+`end` are displayed exactly as written, so keep one convention: abbreviate
+`Jan.`, `Feb.`, `Mar.`, `Apr.`, `Aug.`, `Sept.`, `Oct.`, `Nov.`, `Dec.` with a
+trailing period, and write `May`, `June`, `July` in full. `CV/main.tex` uses
+the same spelling, with `--` between the two ends of a range.
 
 ### Add a publication
 
@@ -74,6 +77,8 @@ Open `_data/publications.yml`, copy this block and fill it in:
   type: "Preprint"
   venue: "arXiv"
   link: "https://arxiv.org/abs/XXXX"
+  # Optional; shown at the end of the metadata line:
+  status: "Under review"
   summary: "One concise sentence explaining the contribution."
   # Optional now; add when artwork is available:
   image: /assets/img/publications/my-paper.jpg
@@ -86,7 +91,8 @@ Open `_data/publications.yml`, copy this block and fill it in:
 ```
 
 It appears automatically at the top of Publications, sorted by year. Every
-entry renders the same metadata line: `year · type · venue`. Use types such as
+entry renders the same metadata line: `year · type · venue`, with an optional
+`status` (such as `Under review`) appended when present. Use types such as
 `Preprint`, `Conference paper`, or `Workshop paper` and give the canonical
 venue separately.
 
@@ -113,7 +119,7 @@ end: "Present"
 to:
 
 ```yaml
-end: "Sep 2026"
+end: "Sept. 2026"
 sort_key: "2026-09-2026-07"
 ```
 

@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Publications — auto-sorted by year (newest first).
 # Required fields: id, title, authors, year, type, venue, summary, links
-# Optional fields: image, image_alt
+# Optional fields: status (e.g. "Under review"), image, image_alt
 # `id` must be unique and URL-safe; research projects use it for internal links.
 # To add a paper: copy one block, fill it in. Done.
 # ---------------------------------------------------------------------------
@@ -12,6 +12,7 @@
   year: 2026
   type: "Preprint"
   venue: "arXiv"
+  status: "Under review"
   link: "https://arxiv.org/abs/2603.11804"
   summary: "A self-contained adaptation framework that uses OpenStreetMap data to generate geographic supervision without manual labels or a stronger external teacher."
   image: "/assets/img/publications/osmda.webp"
