@@ -40,6 +40,20 @@
     - label: "Docs"
       url: "https://lavbench.readthedocs.io/latest/"
 
+- id: "gen-trans"
+  title: "Generative Translation"
+  category: "software"
+  subtitle: "Coursework in Information Search and Retrieval: Application of Deep Learning"
+  year: 2026
+  start: "Feb. 2026"
+  end: "Feb. 2026"
+  sort_key: "2026-02-2026-02"
+  summary: "A from-scratch PyTorch Transformer for Bulgarian-to-English neural machine translation, developed as coursework in Information Search and Retrieval: Application of Deep Learning at Sofia University. It combines custom BPE tokenization, masked multi-head attention, KV-cached beam search, and training optimizations, achieving 42.57 BLEU-4 with 12.26 test perplexity."
+  primary_url: "https://github.com/delyan-boychev/gen-trans"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/delyan-boychev/gen-trans"
+
 - id: "imaginet"
   title: "ImagiNet"
   category: "software"
