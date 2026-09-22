@@ -210,8 +210,8 @@ Informatics undergraduate and INSAIT research scholar working on vision-language
     \resumeSubHeadingListStart
       \resumeProjectHeading{\textbf{DisentangledFlash} $|$ \textit{Triton Attention Kernel}}{Aug.\ 2026 -- Present}{}
       \resumeItemListStart
-        \resumeItem{Fuses QK, relative-position lookup, online softmax, and PV for DeBERTa-v2/v3 into a streaming Triton kernel that avoids materializing the full attention matrix.}
-        \resumeItem{Supports FP16/BF16/FP32, packed unpadded inference, and saved kernel-tuning profiles; released on PyPI under Apache-2.0.}
+        \resumeItem{Fuses DeBERTa-v2/v3 attention into a streaming Triton kernel without materializing the full attention matrix.}
+        \resumeItem{On H200 benchmarks: up to 2.33$\times$ faster than Hugging Face, with up to 70.5\% lower peak memory in the reported comparison.}
         \resumeItem{\cvlink{Code}{https://github.com/delyan-boychev/disentangled-flash}{github.com/delyan-boychev/disentangled-flash}\linksep\cvlink{PyPI}{https://pypi.org/project/disentangled-flash/}{pypi.org/project/disentangled-flash}}
       \resumeItemListEnd
       \resumeProjectHeading{\textbf{LavBench} $|$ \textit{ML Competition Platform}}{June 2026 -- Present}{}

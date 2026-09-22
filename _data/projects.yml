@@ -13,7 +13,7 @@
   start: "Aug. 2026"
   end: "Present"
   sort_key: "9999-99-2026-08"
-  summary: "An inference-oriented Triton implementation of DeBERTa-v2/v3 disentangled attention, fusing QK, relative-position lookup, online softmax, and PV into a single streaming kernel. Because the full attention matrix is never materialized, it lowers both encoder latency and peak GPU memory, with the advantage growing at longer sequence lengths. Supports FP16/BF16/FP32, packed unpadded inference, and saved kernel-tuning profiles."
+  summary: "A streaming Triton kernel for exact DeBERTa-v2/v3 attention that avoids materializing the full attention matrix. On H200 benchmarks, it is up to 2.33× faster than Hugging Face, with up to 70.5% lower peak memory in the reported comparison."
   primary_url: "https://github.com/delyan-boychev/disentangled-flash"
   links:
     - label: "GitHub"
