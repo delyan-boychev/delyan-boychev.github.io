@@ -1,132 +1,6 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+% Shared preamble: packages, margins, and the \resume* macros.
+\input{preamble.tex}
 
-\documentclass[letterpaper,11pt]{article}
-\usepackage[T1]{fontenc}
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage[pro]{fontawesome5}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{hyperref}
-\usepackage{bold-extra}
-\usepackage{multirow}
-\usepackage{xparse}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=blue,
-    pdftitle={CV - Delyan Boychev},
-    pdfpagemode=FullScreen,
-    }
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-\setlength{\footskip}{5pt}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{#1}\vspace{-2pt}
-}
-
-% Width of the entry headings: the full text block minus the list indent, so the
-% right-hand column (locations, dates) ends flush with the section rules.
-\newcommand{\headingwidth}{\dimexpr\textwidth-0.15in\relax}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{\headingwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{\headingwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[3]{
-    \item
-    \begin{tabular*}{\headingwidth}{l@{\extracolsep{\fill}}r}
-      \small #1 & #2 \\
-      \ifx\relax#3\relax \else \textit{#3} & \\ \fi
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-% Uniform link bullets: \cvlink{Label}{url}{shown text}, joined with \linksep
-\newcommand{\cvlink}[3]{\textbf{#1:} \href{#2}{#3}}
-\newcommand{\linksep}{\hspace{1.5mm}\textbar\hspace{1.5mm}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-% Compact variant for the standalone bullet sections (interests, honors, skills)
-\newcommand{\resumeFlatListStart}{\begin{itemize}[itemsep=1pt, parsep=0pt, topsep=2pt, partopsep=0pt]}
-\newcommand{\resumeFlatListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -138,22 +12,8 @@
 %   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
 % \end{tabular*}
 
-\begin{minipage}{0.15\textwidth}%
-\begin{tikzpicture}
-\clip[rounded corners=6pt] (-1.4,-1.4) rectangle (1.4,1.4);
-\node[anchor=center] at (0,-0.2) {\includegraphics[width=4.5cm]{photo.jpg}};
-%adjust this coordinate to move image
-\end{tikzpicture}
-\end{minipage}\hspace{10pt}
-\begin{minipage}{0.8\textwidth}%
- \textbf{\Huge \scshape Delyan Boychev} \\ \vspace{1pt}
-    \small \faAt \hspace{0.5mm} \href{mailto:delyan.boychev@insait.ai}{delyan.boychev@insait.ai} $|$ \faLinkedin \hspace{0.5mm}
-    \href{https://www.linkedin.com/in/d-boychev/}{d-boychev} $|$ \faGithub \hspace{0.5mm}
-    \href{https://github.com/delyan-boychev/}{delyan-boychev} $|$ \faBookOpen\hspace{0.5mm}\href{https://scholar.google.com/citations?user=_uql_SsAAAAJ&hl=en}{Scholar} $|$ \faGlobe \hspace{0.5mm}
-    \href{https://dboychev.com}{dboychev.com}
-    \vspace{1mm}\\
-    Sofia, Bulgaria
-\end{minipage}
+% Shared header: photo, name, and contact links.
+\input{header.tex}
 
 \section{\texorpdfstring{\faUser}{} About me}
 
