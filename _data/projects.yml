@@ -13,7 +13,7 @@
   start: "Aug. 2026"
   end: "Present"
   sort_key: "9999-99-2026-08"
-  summary: "A streaming Triton kernel for exact DeBERTa-v2/v3 attention that avoids materializing the full attention matrix. On H200 benchmarks, it is up to 2.33× faster than Hugging Face, with up to 70.5% lower peak memory in the reported comparison."
+  summary: "A streaming Triton kernel for exact DeBERTa-v2/v3 attention that avoids materializing the full attention matrix. On H200 benchmarks, it is up to 2.33× faster and uses up to 91% less peak memory than Hugging Face Transformers eager."
   primary_url: "https://github.com/delyan-boychev/disentangled-flash"
   links:
     - label: "GitHub"
