@@ -4,20 +4,20 @@
 # ---------------------------------------------------------------------------
 
 name: "Delyan Boychev"
-title: "CS Bachelor"
+title: "Informatics Bachelor"
 eyebrow: "Computer Vision · Vision-Language Models · NLP"
 
 location: "Sofia, Bulgaria"
 
 intro: >-
-  CS undergraduate and INSAIT research scholar working on vision-language
+  Informatics undergraduate and INSAIT research scholar working on vision-language
   models for satellite imagery and 3D scenes; previously a Quant ML intern at
   Man Group and an NLP research intern at Graphwise, with a deep interest in
   aviation safety, originally from Lyaskovets, Bulgaria.
 
 about_me:
   - >-
-    I am an undergraduate research scholar at <a href="https://insait.ai/">INSAIT</a>
+    I am an undergraduate research scholar at <a href="https://insait.ai/delyan-boychev/">INSAIT</a>
     and <a href="https://www.uni-sofia.bg/">Sofia University</a>, advised by
     <a href="https://insait.ai/dr-danda-paudel/">Dr. Danda Paudel</a>, working on
     remote-sensing vision-language models and spatial reasoning in 3D scenes.

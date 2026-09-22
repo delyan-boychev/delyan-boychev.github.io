@@ -26,7 +26,7 @@
 - id: "imaginet"
   title: "ImagiNet: A Multi-Content Benchmark for Synthetic Image Detection"
   authors: "Delyan Boychev, Radostin Cholakov"
-  year: 2024
+  year: 2025
   type: "Workshop paper"
   venue: "AAAI 2025 Workshop on Datasets and Evaluators of AI Safety"
   link: "https://arxiv.org/abs/2407.20020"

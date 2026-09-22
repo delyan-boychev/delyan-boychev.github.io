@@ -13,3 +13,5 @@ CV/*.fls
 CV/*.fdb_latexmk
 CV/*.synctex.gz
 CV/*.toc
+
+.DS_Store
