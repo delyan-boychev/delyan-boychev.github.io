@@ -83,9 +83,13 @@
   \item\small{#1}\vspace{-2pt}
 }
 
+% Width of the entry headings: the full text block minus the list indent, so the
+% right-hand column (locations, dates) ends flush with the section rules.
+\newcommand{\headingwidth}{\dimexpr\textwidth-0.15in\relax}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\headingwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
@@ -93,14 +97,14 @@
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\headingwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[3]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\headingwidth}{l@{\extracolsep{\fill}}r}
       \small #1 & #2 \\
       \ifx\relax#3\relax \else \textit{#3} & \\ \fi
     \end{tabular*}\vspace{-7pt}
@@ -160,8 +164,8 @@ Informatics undergraduate and INSAIT research scholar working on vision-language
 \section{\texorpdfstring{\faGraduationCap}{} Education}
   \resumeSubHeadingListStart
   \resumeSubheading
-      {\parbox[t]{0.8\textwidth}{\href{https://insait.ai/delyan-boychev/}{INSAIT Scholar} (\href{https://explorer.insait.ai/}{highly selective 4-year program}) \\ Faculty of Mathematics and Informatics, Sofia University}}{Sofia, Bulgaria}
-      {\texorpdfstring{Bachelor of Informatics}{}}{Sept.\ 2024 -- Present}
+      {\parbox[t]{0.72\textwidth}{\href{https://insait.ai/delyan-boychev/}{INSAIT Scholar} (\href{https://explorer.insait.ai/}{highly selective 4-year program}) \\ Faculty of Mathematics and Informatics, Sofia University}}{Sofia, Bulgaria}
+      {\texorpdfstring{Bachelor of Informatics}{}}{Sept.\ 2024 -- Expected 2028}
   \resumeSubHeadingListEnd
 \vspace{-3mm}
 \section{\texorpdfstring{\faBriefcase}{} Experience}
