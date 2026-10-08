@@ -19,7 +19,7 @@
 
 % Default summary. A tailored variant (e.g. main-incidentio.tex) defines \aboutme
 % before \input{main.tex} to swap this paragraph without duplicating the CV.
-\providecommand{\aboutme}{Informatics undergraduate and INSAIT research scholar working on vision-language models, remote sensing, 3D scene understanding, and efficient transformer inference. IOAI lecturer; previously a Quant ML intern at Man Group and an NLP research intern at Graphwise. Research spans domain adaptation, synthetic-image detection, adversarial robustness, and interpretability.}
+\providecommand{\aboutme}{Informatics undergraduate and INSAIT research scholar. I work on multimodal learning and natural language processing, and more recently on efficient model training and inference.}
 \aboutme
 
 \vspace{-3mm}
@@ -33,18 +33,18 @@
 \vspace{-3mm}
 \section{\texorpdfstring{\faBriefcase}{} Experience}
     \resumeSubHeadingListStart
-    \resumeProjectHeading{\textbf{NLP Research Intern \textbar \space Graphwise}}{July 2026 -- Sept.\ 2026}{}
-    \resumeItemListStart
-    \resumeItem{Built NLP pipelines for table entity reconciliation, knowledge-base linking, and structured extraction from unstructured text.}
-    \resumeItem{Optimized language-model pipelines for deployment, improving inference cost and latency.}
-    \resumeItemListEnd
     \resumeProjectHeading{\textbf{IOAI Lecturer \textbar \space Bulgarian IOAI Team}}{June 2025 -- Present}{}
     \resumeItemListStart
     \resumeItem{Lecturing and mentoring students preparing for the International Olympiad in Artificial Intelligence (IOAI).}
     \resumeItemListEnd
     \resumeProjectHeading{\textbf{Undergrad Research Scholar \textbar \space INSAIT}}{Oct.\ 2024 -- Present}{}
     \resumeItemListStart
-    \resumeItem{Researching vision-language models for remote sensing and 3D scene understanding under the advisory of Dr. Danda Paudel.}
+    \resumeItem{Researching vision-language models for remote sensing and 3D scene understanding under the supervision of Dr. Danda Paudel.}
+    \resumeItemListEnd
+    \resumeProjectHeading{\textbf{NLP Research Intern \textbar \space Graphwise}}{July 2026 -- Sept.\ 2026}{}
+    \resumeItemListStart
+    \resumeItem{Built NLP pipelines for table entity reconciliation, knowledge-base linking, and structured extraction from unstructured text.}
+    \resumeItem{Optimized language-model pipelines for deployment, improving inference cost and latency.}
     \resumeItemListEnd
     \resumeProjectHeading{\textbf{Quant ML Intern \textbar \space {Man Group}}}{July 2025 -- Sept.\ 2025}{}
     \resumeItemListStart
@@ -77,8 +77,8 @@
     \resumeSubHeadingListStart
       \resumeProjectHeading{\textbf{DisentangledFlash} $|$ \textit{Triton Attention Kernel}}{Aug.\ 2026 -- Present}{}
       \resumeItemListStart
-        \resumeItem{Fuses DeBERTa-v2/v3 attention into a streaming Triton kernel without materializing the full attention matrix.}
-        \resumeItem{On H200 benchmarks: up to 2.33$\times$ faster and up to 91\% lower peak memory than Hugging Face Transformers eager.}
+        \resumeItem{Fuses DeBERTa-v2/v3 attention into a streaming Triton kernel without materializing the full attention matrix; broader-family extensions are underway, with publication under consideration.}
+        \resumeItem{Benchmarked at up to 5.18$\times$ faster forward and 2.15$\times$ faster forward+backward than Hugging Face Transformers eager.}
         \resumeItem{\cvlink{Code}{https://github.com/delyan-boychev/disentangled-flash}{github.com/delyan-boychev/disentangled-flash}\linksep\cvlink{PyPI}{https://pypi.org/project/disentangled-flash/}{pypi.org/project/disentangled-flash}}
       \resumeItemListEnd
       \resumeProjectHeading{\textbf{LavBench} $|$ \textit{ML Competition Platform}}{June 2026 -- Present}{}
@@ -116,7 +116,7 @@
   \resumeProjectHeading
   {\textbf{Gradient Cache Contrastive Learning} $|$ \emph{PyTorch Package}}{2023 -- 2024}{}
   \resumeItemListStart
-    \resumeItem{A PyTorch implementation of gradient caching for scaling computer-vision contrastive learning beyond GPU memory limits.}
+    \resumeItem{Implemented gradient caching in PyTorch to scale contrastive learning beyond GPU memory limits.}
     \resumeItem{Reproduces large-batch gradients from smaller chunks; supports SimCLR, SupCon, SelfCon, mixed precision, and distributed training.}
     \resumeItem{\cvlink{Code}{https://github.com/delyan-boychev/grad-cache-con-learning}{github.com/delyan-boychev/grad-cache-con-learning}\linksep\cvlink{PyPI}{https://pypi.org/project/grad-cache-con-learning/}{pypi.org/project/grad-cache-con-learning}}
   \resumeItemListEnd

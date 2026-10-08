@@ -10,7 +10,7 @@
   location: "Sofia, Bulgaria"
   start: "July 2026"
   end: "Sept. 2026"
-  sort_key: "9999-99-2026-07"
+  sort_key: "2026-09-2026-07"
   organization_url: "https://graphwise.ai/"
   bullets:
     - "Worked on table entity reconciliation: matching entities across tabular records and linking them to a knowledge base."
