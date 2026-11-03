@@ -5,30 +5,22 @@
 
 name: "Delyan Boychev"
 title: "Informatics Bachelor"
-eyebrow: "Computer Vision · Vision-Language Models · NLP"
+eyebrow: "Efficient Machine Learning · Vision-Language Models · 3D Scene Processing"
 
 location: "Sofia, Bulgaria"
 
-intro: >-
-  Informatics undergraduate and INSAIT research scholar working on vision-language
-  models for satellite imagery and 3D scenes; previously a Quant ML intern at
-  Man Group and an NLP research intern at Graphwise, with a deep interest in
-  aviation safety, originally from Lyaskovets, Bulgaria.
 
 about_me:
   - >-
-    I am an undergraduate research scholar at <a href="https://insait.ai/delyan-boychev/">INSAIT</a>
-    and <a href="https://www.uni-sofia.bg/">Sofia University</a>, advised by
-    <a href="https://insait.ai/dr-danda-paudel/">Dr. Danda Paudel</a>, working on
-    remote-sensing vision-language models and spatial reasoning in 3D scenes.
-  - >-
-    I recently started working on GPU kernel programming, with a first
-    project on efficient transformer inference. Previously, I was a Quant ML
+    I am an Informatics student at <a href="https://www.uni-sofia.bg/">Sofia University</a>
+    and an undergraduate research scholar at <a href="https://insait.ai/delyan-boychev/">INSAIT</a>,
+    advised by <a href="https://insait.ai/dr-dimitar-iliev-dimitrov/">Dr. Dimitar I. Dimitrov</a>
+    on efficient machine learning, and by
+    <a href="https://insait.ai/dr-danda-paudel/">Dr. Danda Paudel</a> on vision-language
+    models for remote sensing and 3D scene processing. Previously, I was a Quant ML
     intern at <a href="https://www.man.com/">Man Group</a> and an NLP research
-    intern at <a href="https://graphwise.ai/">Graphwise</a>. Earlier work
-    covered synthetic-image detection, adversarial robustness, and
-    interpretability.
+    intern at <a href="https://graphwise.ai/">Graphwise</a>.
   - >-
-    Outside research, I am interested in aviation safety and aircraft design —
-    especially the Airbus A350. For now I follow interesting aircraft on
-    Flightradar24; spotting them from the ground - soon.
+    Outside research, I am interested in aviation safety and aircraft design,
+    especially the Airbus A350. In my free time, I collect and build scale models of
+    airliners and follow interesting aircraft on Flightradar24.

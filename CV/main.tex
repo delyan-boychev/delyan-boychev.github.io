@@ -3,6 +3,10 @@
 
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Variant switches (define before \input{main.tex}):
+%   \aboutme    -- replaces the summary paragraph.
+%   \industrycv -- engineering-role variant: "About me" heading instead of
+%                  "Research Interests", and coursework projects are shown.
 
 \begin{document}
 
@@ -15,97 +19,110 @@
 % Shared header: photo, name, and contact links.
 \input{header.tex}
 
-\section{\texorpdfstring{\faUser}{} About me}
-
-% Default summary. A tailored variant (e.g. main-incidentio.tex) defines \aboutme
+\ifdefined\industrycv
+\section{About me}
+% Summary paragraph. An industry variant (e.g. main-incidentio.tex) defines \aboutme
 % before \input{main.tex} to swap this paragraph without duplicating the CV.
 \providecommand{\aboutme}{Informatics undergraduate and INSAIT research scholar. I work on multimodal learning and natural language processing, and more recently on efficient model training and inference.}
 \aboutme
-
 \vspace{-3mm}
+\else
+\section{Research Interests}
+Efficient and multimodal deep learning, with a focus on:
+\resumeFlatListStart
+\resumeItem{Hardware-aware algorithms and GPU kernels for fast training and inference.}
+\resumeItem{Vision-language models for remote sensing and 3D scene processing.}
+\resumeFlatListEnd
+\vspace{-1.5mm}
+\fi
+
 %-----------EDUCATION-----------
-\section{\texorpdfstring{\faGraduationCap}{} Education}
+\section{Education}
   \resumeSubHeadingListStart
   \resumeSubheading
       {\parbox[t]{0.72\textwidth}{\href{https://insait.ai/delyan-boychev/}{INSAIT Scholar} (\href{https://explorer.insait.ai/}{highly selective 4-year program}) \\ Faculty of Mathematics and Informatics, Sofia University}}{Sofia, Bulgaria}
       {\texorpdfstring{Bachelor of Informatics}{}}{Sept.\ 2024 -- Expected 2028}
   \resumeSubHeadingListEnd
 \vspace{-3mm}
-\section{\texorpdfstring{\faBriefcase}{} Experience}
+\section{Experience}
     \resumeSubHeadingListStart
-    \resumeProjectHeading{\textbf{IOAI Lecturer \textbar \space Bulgarian IOAI Team}}{June 2025 -- Present}{}
-    \resumeItemListStart
-    \resumeItem{Lecturing and mentoring students preparing for the International Olympiad in Artificial Intelligence (IOAI).}
-    \resumeItemListEnd
     \resumeProjectHeading{\textbf{Undergrad Research Scholar \textbar \space INSAIT}}{Oct.\ 2024 -- Present}{}
     \resumeItemListStart
-    \resumeItem{Researching vision-language models for remote sensing and 3D scene understanding under the supervision of Dr. Danda Paudel.}
+    \resumeItem{\textbf{Efficient training and inference} (advised by \href{https://insait.ai/dr-dimitar-iliev-dimitrov/}{Dr. Dimitar I. Dimitrov}): accelerating relative-position attention with exact, fused Triton kernels, using offset-aware tiling, cross-tile reuse, and an atomic-free backward pass \pubref{relpos}.}
+    \resumeItem{At 8K tokens: up to 6.4$\times$ faster forward, 21$\times$ faster backward, and 128$\times$ lower peak memory than the strongest baselines; 1.8$\times$ faster end-to-end speech transcription.}
+    \resumeItem{\textbf{Remote-sensing VLMs} (advised by \href{https://insait.ai/dr-danda-paudel/}{Dr. Danda Paudel}): adapting vision-language models to satellite imagery with OpenStreetMap-derived supervision (OSMDA \pubref{osmda}).}
+    \resumeItem{\textbf{3D scene processing} (advised by \href{https://insait.ai/dr-danda-paudel/}{Dr. Danda Paudel}): data-efficient structured scene understanding, building on SpatialLM with a Chorus-based 3D Gaussian encoder to lower training-data requirements (ongoing).}
     \resumeItemListEnd
-    \resumeProjectHeading{\textbf{NLP Research Intern \textbar \space Graphwise}}{July 2026 -- Sept.\ 2026}{}
+    \resumeProjectHeading{\textbf{NLP Research Intern \textbar \space Graphwise}}{July 2026 -- Sept.\ 2026}{Mentors: Dr.\ Petar Mitankin, Dr.\ Nikola Tulechki, Dr.\ Philip Ganchev, Zlatina Marinova}
     \resumeItemListStart
     \resumeItem{Built NLP pipelines for table entity reconciliation, knowledge-base linking, and structured extraction from unstructured text.}
     \resumeItem{Optimized language-model pipelines for deployment, improving inference cost and latency.}
     \resumeItemListEnd
-    \resumeProjectHeading{\textbf{Quant ML Intern \textbar \space {Man Group}}}{July 2025 -- Sept.\ 2025}{}
+    \resumeProjectHeading{\textbf{Quant ML Intern \textbar \space {Man Group}}}{July 2025 -- Sept.\ 2025}{Mentors: Dr.\ Yavor Kovachev, Dr.\ Diana Zheng}
     \resumeItemListStart
     \resumeItem{Conducted Quant ML research, focusing on developing and evaluating machine-learning models for systematic trading and signal forecasting.}
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 \vspace{-3mm}
-\section{\texorpdfstring{\faBook}{} Publications}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading{\textbf{OSMDA: OpenStreetMap-based Domain Adaptation for Remote Sensing VLMs} $|$ \textit{arXiv Preprint, 2026}}{}{}
-      \resumeItemListStart
-    \resumeItem{Stefan Maria Ailuro, Mario Markov, Mohammad Mahdi, \textbf{Delyan Boychev}, Luc Van Gool, Danda Pani Paudel}
-    \resumeItem{Self-contained domain adaptation using OpenStreetMap supervision without manual labels or a stronger external teacher; under review.}
-    \resumeItem{\cvlink{Paper}{https://arxiv.org/abs/2603.11804}{arxiv.org/abs/2603.11804}}
-      \resumeItemListEnd
-      \resumeProjectHeading{\textbf{ImagiNet: A Multi-Content Benchmark for Synthetic Image Detection} $|$ \textit{AAAI 2025 Workshop Paper}}{}{}
-      \resumeItemListStart
-        \resumeItem{\textbf{Delyan Boychev}, Radostin Cholakov --- AAAI 2025 Workshop on Datasets and Evaluators of AI Safety}
-        \resumeItem{A balanced 200K-image benchmark spanning four content types and multiple open and proprietary generators, with strong contrastive-learning baselines.}
-        \resumeItem{\cvlink{Paper}{https://arxiv.org/abs/2407.20020}{arxiv.org/abs/2407.20020}}
-      \resumeItemListEnd
-      \resumeProjectHeading{\textbf{Interpretable Computer Vision Models through Adversarial Training} $|$ \textit{arXiv Preprint, 2023}}{}{}
-      \resumeItemListStart
-        \resumeItem{Single-author empirical study of how adversarial training changes learned representations and model interpretability.}
-        \resumeItem{\cvlink{Paper}{https://arxiv.org/abs/2307.02500}{arxiv.org/abs/2307.02500}}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
-\vspace{-3mm}
-\section{\texorpdfstring{\faFolderOpen}{} Projects}
+\section{Publications}
+    \resumePubListStart
+      \resumePub{relpos}{Fast and Exact Relative-Position Attention via Structure-Aware Kernels}
+        {\textbf{Delyan Boychev}, Ivo Petrov, Dimitar I. Dimitrov}
+        {arXiv preprint, 2026. Under review.}
+        {\href{https://arxiv.org/abs/2611.01182}{arXiv:2611.01182}}
+      \resumePub{osmda}{OSMDA: OpenStreetMap-based Domain Adaptation for Remote Sensing VLMs}
+        {Stefan Maria Ailuro, Mario Markov, Mohammad Mahdi, \textbf{Delyan Boychev}, Luc Van Gool, Danda Pani Paudel}
+        {arXiv preprint, 2026. Under review.}
+        {\href{https://arxiv.org/abs/2603.11804}{arXiv:2603.11804}}
+      \resumePub{imaginet}{ImagiNet: A Multi-Content Benchmark for Synthetic Image Detection}
+        {\textbf{Delyan Boychev}, Radostin Cholakov}
+        {AAAI 2025 Workshop on Datasets and Evaluators of AI Safety.}
+        {\href{https://openreview.net/forum?id=1AtxTY2nPC}{OpenReview}\linksep\href{https://arxiv.org/abs/2407.20020}{arXiv:2407.20020}}
+      \resumePub{interpretability}{Interpretable Computer Vision Models through Adversarial Training}
+        {\textbf{Delyan Boychev}}
+        {arXiv preprint, 2023.}
+        {\href{https://arxiv.org/abs/2307.02500}{arXiv:2307.02500}}
+    \resumePubListEnd
+\vspace{-1mm}
+\section{Honors}
+\resumeFlatListStart
+\resumeItem{Scholarship Recipient, EXPLORER Program, INSAIT (2024)}
+\resumeItem{European Space Agency Award from EUCYS'24, Katowice, Poland}
+\resumeItem{International Olympiad in Artificial Intelligence 2024, Team Bronze Medal}
+\resumeItem{Regeneron ISEF'23 Finalist, Dallas, Texas}
+\resumeItem{John Atanasoff Presidential Award in the category ``Debut breakthrough in computer technology'' (2023)}
+\resumeFlatListEnd
+\vspace{-1.5mm}
+\section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading{\textbf{DisentangledFlash} $|$ \textit{Triton Attention Kernel}}{Aug.\ 2026 -- Present}{}
       \resumeItemListStart
-        \resumeItem{Fuses DeBERTa-v2/v3 attention into a streaming Triton kernel without materializing the full attention matrix; broader-family extensions and integration with vLLM are underway, with publication under consideration.}
+        \resumeItem{Fuses DeBERTa-v2/v3 attention into a streaming Triton kernel without materializing the full attention matrix.}
         \resumeItem{Benchmarked at up to 5.18$\times$ faster forward and 2.15$\times$ faster forward+backward than Hugging Face Transformers eager.}
+        \resumeItem{Integrated into \href{https://github.com/fastino-ai/GLiNER2}{GLiNER2} (fastino-ai) as an optional attention backend, released in v2.1.0. Also contributed span-scoring and span-decoding speedups (up to 1.92$\times$) to GLiNER2.}
+        \resumeItem{The paper \pubref{relpos} is a continuation of this project.}
         \resumeItem{\cvlink{Code}{https://github.com/delyan-boychev/disentangled-flash}{github.com/delyan-boychev/disentangled-flash}\linksep\cvlink{PyPI}{https://pypi.org/project/disentangled-flash/}{pypi.org/project/disentangled-flash}}
       \resumeItemListEnd
       \resumeProjectHeading{\textbf{LavBench} $|$ \textit{ML Competition Platform}}{June 2026 -- Present}{}
       \resumeItemListStart
-        \resumeItem{A secure, bilingual platform for machine-learning competitions, built for Bulgarian AI Olympiad selection and national contests.}
+        \resumeItem{A secure, bilingual platform for machine-learning competitions; the official evaluation system of the Bulgarian National Olympiad in AI.}
         \resumeItem{Runs notebook and Python submissions in hardened Docker sandboxes; provides live leaderboards, double-blind jury review, custom evaluators, and distributed workers.}
         \resumeItem{\cvlink{Code}{https://github.com/delyan-boychev/lavbench}{github.com/delyan-boychev/lavbench}\linksep\cvlink{Docs}{https://lavbench.readthedocs.io/latest/}{lavbench.readthedocs.io}}
       \resumeItemListEnd
-      \resumeProjectHeading{\textbf{Generative Translation} $|$ \textit{Coursework in Information Search and Retrieval: Application of Deep Learning}}{Feb.\ 2026}{}
+\ifdefined\industrycv
+      \resumeProjectHeading{\textbf{Generative Translation} $|$ \textit{Coursework: Information Search and Retrieval with Deep Learning}}{Feb.\ 2026}{}
       \resumeItemListStart
         \resumeItem{Built a decoder-only PyTorch Transformer for Bulgarian-to-English translation with custom BPE, masked attention, KV caching, and beam search.}
         \resumeItem{Achieved 42.57 BLEU-4 with 12.26 test perplexity using beam search.}
         \resumeItem{\cvlink{Code}{https://github.com/delyan-boychev/gen-trans}{github.com/delyan-boychev/gen-trans}}
       \resumeItemListEnd
-      \resumeProjectHeading{\textbf{Vision-Language Models for Satellite Imagery Understanding} $|$ \textit{Research at INSAIT}}{Dec.\ 2025 -- Present}{Advised by \href{https://insait.ai/dr-danda-paudel/}{Dr. Danda Paudel}}
-  \resumeItemListStart
-    \resumeItem{Adapting vision-language models to satellite imagery using scalable supervision derived from OpenStreetMap.}
-  \resumeItemListEnd\resumeProjectHeading{\textbf{Spatial Modeling for Point-Cloud Understanding} $|$ \textit{Research at INSAIT}}{June 2025 -- Present}{Advised by \href{https://insait.ai/dr-danda-paudel/}{Dr. Danda Paudel}}
-  \resumeItemListStart
-    \resumeItem{Aligning 3D point-cloud and Gaussian representations for structured spatial reasoning and scene understanding.}
-  \resumeItemListEnd
-\resumeProjectHeading
+      \resumeProjectHeading
   {\textbf{C++ Coursework} $|$ \emph{DSA and OOP Course Projects}}{2025}{}
   \resumeItemListStart
     \resumeItem{Built a dependency-aware expression solver with polymorphic tokenization and two-stack evaluation, and a modular digital audio workstation with timeline editing, effects, and audio I/O.}
     \resumeItem{\cvlink{Solver}{https://github.com/delyan-boychev/partial-solver}{partial-solver}\linksep\cvlink{Audio Workstation}{https://github.com/delyan-boychev/dig-audio-workstation}{dig-audio-workstation}}
   \resumeItemListEnd
+\fi
   \resumeProjectHeading
   {\textbf{ImagiNet} $|$ \emph{Synthetic Image Dataset}}{2024}{}
   \resumeItemListStart
@@ -122,25 +139,25 @@
   \resumeItemListEnd
     \resumeSubHeadingListEnd
 \vspace{-3mm}
-\section{\texorpdfstring{\faAward}{} Honors}
+\section{Teaching \& Service}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{National Committee Member \& Lecturer \textbar \space Bulgarian National Olympiad in AI}}{June 2025 -- Present}{}
+    \resumeItemListStart
+    \resumeItem{Member of the national committee organizing the Bulgarian National Olympiad in AI: writing competition tasks and running contests on LavBench (see Projects).}
+    \resumeItem{Lecturing and mentoring students preparing for the national olympiad and the International Olympiad in Artificial Intelligence (IOAI).}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-3mm}
+\section{Technical Skills}
 \resumeFlatListStart
-\resumeItem{Scholarship Recipient, EXPLORER Program, INSAIT (2024)}
-\resumeItem{European Space Agency Award from EUCYS'24, Katowice, Poland}
-\resumeItem{International Olympiad in Artificial Intelligence 2024, Team Bronze Medal}
-\resumeItem{Regeneron ISEF'23 Finalist, Dallas, Texas}
-\resumeItem{John Atanasoff Presidential Award in the category ``Debut breakthrough in computer technology'' (2023)}
-\resumeFlatListEnd
-\vspace{-1.5mm}
-\section{\texorpdfstring{\faLaptopCode}{} Technical Skills}
-\resumeFlatListStart
-\resumeItem{\textbf{Languages:} Python, C++, TypeScript, JavaScript}
+\resumeItem{\textbf{Programming:} Python, C++, TypeScript, JavaScript}
 \resumeItem{\textbf{ML/Research:} PyTorch, Triton, vLLM, Hugging Face Transformers}
 \resumeItem{\textbf{Data Science:} NumPy, pandas, scikit-learn}
 \resumeItem{\textbf{Web \& Backend:} React, Vite, Tailwind CSS, Flask, Celery, PostgreSQL}
 \resumeItem{\textbf{Tools:} Linux, Docker, Google Cloud, CI/CD, Git}
 \resumeFlatListEnd
 \vspace{-1.5mm}
-\section{\texorpdfstring{\faLanguage}{} Languages}
+\section{Languages}
 \resumeFlatListStart
 \resumeItem{Bulgarian --- Native}
 \resumeItem{English --- IELTS Academic, 7.0/9.0}

@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -106,11 +106,22 @@
     \item
     \begin{tabular*}{\headingwidth}{l@{\extracolsep{\fill}}r}
       \small #1 & #2 \\
-      \ifx\relax#3\relax \else \textit{#3} & \\ \fi
+      \ifx\relax#3\relax \else \multicolumn{2}{l}{\textit{#3}} \\ \fi
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% Citation-style, numbered publication entry (bold title, then authors, venue/status, link):
+% \resumePub{key}{Title}{Authors with \textbf{Delyan Boychev}}{Venue, year. Status.}{links}
+% where {links} is one or more \href{url}{text}, joined with \linksep.
+% Cite it elsewhere with \pubref{key}, which prints a clickable [n].
+\newcommand{\resumePub}[5]{
+  \item\label{pub:#1}\small{\textbf{#2}\\#3. \textit{#4} #5}
+}
+\newcommand{\pubref}[1]{\ref{pub:#1}}
+\newcommand{\resumePubListStart}{\begin{enumerate}[label={[\arabic*]}, font=\small, labelindent=0.15in, leftmargin=*, itemsep=3pt, parsep=0pt, topsep=2pt]}
+\newcommand{\resumePubListEnd}{\end{enumerate}\vspace{-5pt}}
 
 % Uniform link bullets: \cvlink{Label}{url}{shown text}, joined with \linksep
 \newcommand{\cvlink}[3]{\textbf{#1:} \href{#2}{#3}}

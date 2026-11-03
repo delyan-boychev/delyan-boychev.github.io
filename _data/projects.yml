@@ -13,13 +13,15 @@
   start: "Aug. 2026"
   end: "Present"
   sort_key: "9999-99-2026-08"
-  summary: "A streaming Triton kernel for exact DeBERTa-v2/v3 attention that avoids materializing the full attention matrix. Benchmarks show up to 5.18× faster forward and 2.15× faster forward+backward than Hugging Face Transformers eager."
+  summary: "A streaming Triton kernel for exact DeBERTa-v2/v3 attention that avoids materializing the full attention matrix. Benchmarks show up to 5.18× faster forward and 2.15× faster forward+backward than Hugging Face Transformers eager. Integrated into <a href=\"https://github.com/fastino-ai/GLiNER2\">GLiNER2</a> (fastino-ai) as an optional attention backend, released in v2.1.0. The arXiv paper <em>Fast and Exact Relative-Position Attention via Structure-Aware Kernels</em> (under review) is a continuation of this project."
   primary_url: "https://github.com/delyan-boychev/disentangled-flash"
   links:
     - label: "GitHub"
       url: "https://github.com/delyan-boychev/disentangled-flash"
     - label: "PyPI"
       url: "https://pypi.org/project/disentangled-flash/"
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2611.01182"
 
 - id: "lavbench"
   title: "LavBench"
@@ -29,7 +31,7 @@
   start: "June 2026"
   end: "Present"
   sort_key: "9999-99-2026-06"
-  summary: "A secure, bilingual platform for machine-learning competitions, built for Bulgarian AI Olympiad selection and national contests. It runs notebook and Python submissions in hardened Docker sandboxes and provides live leaderboards, double-blind jury review, custom evaluators, and distributed workers."
+  summary: "A secure, bilingual platform for machine-learning competitions; the official evaluation system of the Bulgarian National Olympiad in AI. It runs notebook and Python submissions in hardened Docker sandboxes and provides live leaderboards, double-blind jury review, custom evaluators, and distributed workers."
   primary_url: "https://github.com/delyan-boychev/lavbench"
   image: "/assets/img/projects/lavbench.svg"
   image_alt: "LavBench logo"
@@ -39,20 +41,6 @@
       url: "https://github.com/delyan-boychev/lavbench"
     - label: "Docs"
       url: "https://lavbench.readthedocs.io/latest/"
-
-- id: "gen-trans"
-  title: "Generative Translation"
-  category: "software"
-  subtitle: "Coursework in Information Search and Retrieval: Application of Deep Learning"
-  year: 2026
-  start: "Feb. 2026"
-  end: "Feb. 2026"
-  sort_key: "2026-02-2026-02"
-  summary: "A from-scratch PyTorch Transformer for Bulgarian-to-English neural machine translation, developed as coursework in Information Search and Retrieval: Application of Deep Learning at Sofia University. It combines custom BPE tokenization, masked multi-head attention, KV-cached beam search, and training optimizations, achieving 42.57 BLEU-4 with 12.26 test perplexity."
-  primary_url: "https://github.com/delyan-boychev/gen-trans"
-  links:
-    - label: "GitHub"
-      url: "https://github.com/delyan-boychev/gen-trans"
 
 - id: "imaginet"
   title: "ImagiNet"
@@ -73,7 +61,7 @@
     - label: "GitHub"
       url: "https://github.com/delyan-boychev/imaginet"
     - label: "Paper"
-      url: "https://arxiv.org/abs/2407.20020"
+      url: "https://openreview.net/forum?id=1AtxTY2nPC"
 
 - id: "gradient-cache"
   title: "Gradient Cache Contrastive Learning"
@@ -107,6 +95,27 @@
     - label: "Paper"
       url: "https://arxiv.org/abs/2307.02500"
 
+- id: "efficient-training-inference"
+  title: "Efficient Machine Learning"
+  category: "research"
+  subtitle: "Research at INSAIT"
+  org: "INSAIT"
+  advisor: "Dr. Dimitar I. Dimitrov"
+  advisor_link: "https://insait.ai/dr-dimitar-iliev-dimitrov/"
+  start: "Aug. 2026"
+  end: "Present"
+  sort_key: "9999-99-2026-08"
+  organization_url: "https://insait.ai/"
+  summary: "Accelerating relative-position attention with exact, fused Triton kernels, using offset-aware tiling, cross-tile reuse, and an atomic-free backward pass for faster, more memory-efficient training and inference."
+  collaborators: "With Ivo Petrov"
+  related:
+    papers:
+      - title: "Fast and Exact Relative-Position Attention"
+        id: "relpos-attention"
+    projects:
+      - title: "DisentangledFlash"
+        id: "disentangled-flash"
+
 - id: "satellite-vlms"
   title: "Vision-Language Models for Satellite Imagery Understanding"
   category: "research"
@@ -132,7 +141,7 @@
     - "This work resulted in the OSMDA preprint (see Publications)."
 
 - id: "spatial-point-cloud"
-  title: "Spatial Modeling for Point-Cloud Understanding"
+  title: "3D Scene Processing"
   category: "research"
   subtitle: "Research at INSAIT"
   org: "INSAIT"
@@ -142,54 +151,13 @@
   end: "Present"
   sort_key: "9999-99-2025-06"
   organization_url: "https://insait.ai/"
-  summary: "Aligning 3D point-cloud and Gaussian representations for structured spatial reasoning and scene understanding."
+  summary: "Data-efficient structured 3D scene understanding, building on SpatialLM with a Chorus-based 3D Gaussian encoder to lower training-data requirements."
   collaborators: "With Runyi Yang"
   bullets:
     - "Shared work with Runyi Yang."
-    - "Worked on aligning 3D point-cloud and Gaussian representations for structured scene understanding."
+    - "Building on SpatialLM with a Chorus-based 3D Gaussian encoder to lower training-data requirements for structured scene understanding."
     - "Built and experimented with the end-to-end training pipeline (data processing, model integration, and evaluation) for learning spatial grounding from 3D inputs."
     - "Working on refining model components to improve stability and generalization across diverse indoor scenes (project ongoing)."
-
-- id: "partial-solver"
-  title: "Partial Solver"
-  category: "software"
-  subtitle: "DSA Course Project (C++)"
-  year: 2025
-  start: "Nov. 2025"
-  end: "Nov. 2025"
-  sort_key: "2025-11-2025-11"
-  link: "https://github.com/delyan-boychev/partial-solver"
-  link_label: "GitHub repository"
-  summary: "A dependency-aware C++ expression engine with polymorphic tokenization and two-stack infix evaluation."
-  primary_url: "https://github.com/delyan-boychev/partial-solver"
-  links:
-    - label: "GitHub"
-      url: "https://github.com/delyan-boychev/partial-solver"
-  bullets:
-    - "Implemented an expression solver that parses and evaluates arithmetic formulas with variables and dependency-aware execution."
-    - "Built a tokenizer using polymorphic token classes (e.g., numbers/operators/identifiers) to convert input into structured objects."
-    - "Evaluated infix expressions using the classic two-stack algorithm (operators/operands) for correct precedence and associativity."
-    - "Handled inter-expression dependencies via a queue-based scheduler and a variable table, with careful memory management to avoid leaks/double-free."
-
-- id: "digital-audio-workstation"
-  title: "Digital Audio Workstation"
-  category: "software"
-  subtitle: "OOP Course Project (C++)"
-  year: 2025
-  start: "June 2025"
-  end: "June 2025"
-  sort_key: "2025-06-2025-06"
-  link: "https://github.com/delyan-boychev/dig-audio-workstation"
-  link_label: "GitHub repository"
-  summary: "A modular C++ audio workstation with timeline editing, file I/O, and an extensible effects architecture."
-  primary_url: "https://github.com/delyan-boychev/dig-audio-workstation"
-  links:
-    - label: "GitHub"
-      url: "https://github.com/delyan-boychev/dig-audio-workstation"
-  bullets:
-    - "University project for an Object-Oriented Programming course: a simplified digital audio workstation implemented in C++."
-    - "Designed an extensible OOP architecture (tracks/components, command interface, file I/O) with clean abstractions and modular code."
-    - "Implemented core editing workflows such as importing/exporting audio, timeline/clip operations, and basic effects processing."
 
 - id: "synthetic-image-detection"
   title: "Synthetic Image Detection via Supervised Contrastive Learning"
@@ -198,12 +166,12 @@
   start: "Aug. 2023"
   end: "Aug. 2024"
   sort_key: "2024-08-2023-08"
-  link: "https://arxiv.org/abs/2407.20020"
+  link: "https://openreview.net/forum?id=1AtxTY2nPC"
   link_label: "Research paper"
   summary: "The research project behind ImagiNet, a diverse synthetic-image benchmark and generalizable contrastive-learning baseline."
   links:
     - label: "Paper"
-      url: "https://arxiv.org/abs/2407.20020"
+      url: "https://openreview.net/forum?id=1AtxTY2nPC"
   bullets:
     - "Generative models, such as Diffusion Models, Variational Auto-Encoders, and Generative Adversarial Networks, produce images with a level of authenticity that makes them nearly indistinguishable from real photos and artwork."
     - "The work provides a new balanced training and benchmarking dataset containing diverse image content — photos, paintings, faces, and uncategorised images."

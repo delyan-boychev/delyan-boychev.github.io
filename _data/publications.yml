@@ -23,19 +23,36 @@
     - label: "PDF"
       url: "https://arxiv.org/pdf/2603.11804"
 
+- id: "relpos-attention"
+  title: "Fast and Exact Relative-Position Attention via Structure-Aware Kernels"
+  authors: "Delyan Boychev, Ivo Petrov, Dimitar I. Dimitrov"
+  year: 2026
+  type: "Preprint"
+  venue: "arXiv"
+  status: "Under review"
+  link: "https://arxiv.org/abs/2611.01182"
+  summary: "An exact FlashAttention-style tiled algorithm that brings additive relative-position attention (Shaw, Transformer-XL, DeBERTa, T5) into fused Triton kernels. It projects only reachable offsets, reuses relation entries across constant-offset tiles, and accumulates gradients by offset without atomics: up to 6.4× faster forward and 21× faster backward at 8K tokens."
+  image: "/assets/img/publications/relpos-attention.webp"
+  image_alt: "Relative-position attention tile grid with constant-offset tiles away from the diagonal and variable-offset tiles near it"
+  links:
+    - label: "Paper"
+      url: "https://arxiv.org/abs/2611.01182"
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2611.01182"
+
 - id: "imaginet"
   title: "ImagiNet: A Multi-Content Benchmark for Synthetic Image Detection"
   authors: "Delyan Boychev, Radostin Cholakov"
   year: 2025
   type: "Workshop paper"
   venue: "AAAI 2025 Workshop on Datasets and Evaluators of AI Safety"
-  link: "https://arxiv.org/abs/2407.20020"
+  link: "https://openreview.net/forum?id=1AtxTY2nPC"
   summary: "A balanced 200K-image benchmark spanning four content types and multiple open and proprietary generators, with strong contrastive-learning baselines."
   image: "/assets/img/publications/imaginet.webp"
   image_alt: "Overview of the ImagiNet synthetic-image detection benchmark"
   links:
     - label: "Paper"
-      url: "https://arxiv.org/abs/2407.20020"
+      url: "https://openreview.net/forum?id=1AtxTY2nPC"
     - label: "PDF"
       url: "https://arxiv.org/pdf/2407.20020"
 

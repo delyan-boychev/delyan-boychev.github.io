@@ -44,7 +44,7 @@ rebuild automatically while `jekyll serve` is running; otherwise run
 | `_data/publications.yml` | Papers (auto-sorted newest first by `year`) |
 | `_data/projects.yml` | Current research and selected projects (automatically sorted) |
 | `_data/honors.yml` | Honors & awards (order = file order) |
-| `_data/research_interests.yml` | "Research Interests" list (order = file order) |
+| `_data/research_interests.yml` | Topics for search-engine structured data (JSON-LD `knowsAbout`); not shown on the page |
 
 Publications are sorted by `year`. Education, experience, and projects are
 sorted by `sort_key`: ongoing entries first by newest start date, followed by

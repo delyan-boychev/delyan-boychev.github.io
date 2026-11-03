@@ -356,6 +356,14 @@ h3 { line-height: 1.2; }
 
 .card-topline a { color: $muted; }
 
+/* Organization links in research cards match the Experience timeline (blue + external icon) */
+.card-topline a.org-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.24rem;
+  color: $link;
+}
+
 .work-card h3,
 .timeline-item h3,
 .project-card h3,
@@ -591,6 +599,7 @@ h3 { line-height: 1.2; }
 }
 
 .details-grid { padding-bottom: 4rem; }
+.details-grid.is-single { grid-template-columns: minmax(0, 1fr); }
 
 .compact-heading { margin-bottom: 1rem; }
 .compact-heading h2 { font-size: 1.45rem; }

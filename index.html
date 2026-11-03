@@ -13,7 +13,6 @@ title: null
   <div class="hero-copy">
     <p class="eyebrow">{{ profile.eyebrow }}</p>
     <h1 id="hero-title">{{ profile.name }}</h1>
-    <p class="hero-intro">{% include tldr-mark.html %}{{ profile.intro }}</p>
 
     <div class="hero-bio">
       {% for para in profile.about_me %}<p>{{ para }}</p>{% endfor %}
@@ -38,7 +37,6 @@ title: null
 <div class="work-grid shell">
   <section id="research" class="work-column" aria-labelledby="research-title">
     <div class="section-heading">
-      <p class="section-kicker">What I am exploring</p>
       <h2 id="research-title">Current Research</h2>
     </div>
 
@@ -52,7 +50,7 @@ title: null
           <img class="card-media" src="{{ project.image_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy">
           {% endif %}
           <div class="card-topline">
-            <span>{% if project.organization_url %}<a href="{{ project.organization_url }}">{{ project.org }}</a>{% else %}{{ project.org }}{% endif %}</span>
+            <span>{% if project.organization_url %}<a class="org-link" href="{{ project.organization_url }}">{% include link-icon.html label='External' %}<span>{{ project.org }}</span></a>{% else %}{{ project.org }}{% endif %}</span>
             <span>{{ project.start }} — {{ project.end }}</span>
           </div>
           <h3>{{ project.title }}</h3>
@@ -75,7 +73,6 @@ title: null
 
   <section id="experience" class="work-column" aria-labelledby="experience-title">
     <div class="section-heading">
-      <p class="section-kicker">Where I have worked</p>
       <h2 id="experience-title">Experience</h2>
     </div>
 
@@ -100,7 +97,6 @@ title: null
 <section id="publications" class="content-section shell" aria-labelledby="publications-title">
   <div class="section-heading split-heading">
     <div>
-      <p class="section-kicker">Peer-reviewed work & preprints</p>
       <h2 id="publications-title">Publications</h2>
     </div>
     <a class="heading-link" href="{{ site.profiles.scholar }}">{% include profile-icon.html name='scholar' %}<span>Google Scholar</span></a>
@@ -138,7 +134,6 @@ title: null
 
 <section id="projects" class="content-section shell" aria-labelledby="projects-title">
   <div class="section-heading">
-    <p class="section-kicker">Things I have built</p>
     <h2 id="projects-title">Selected Projects</h2>
   </div>
 
@@ -176,7 +171,6 @@ title: null
 
 <section id="education" class="content-section shell" aria-labelledby="education-title">
   <div class="section-heading">
-    <p class="section-kicker">Academic background</p>
     <h2 id="education-title">Education</h2>
   </div>
 
@@ -198,10 +192,9 @@ title: null
   </div>
 </section>
 
-<section class="details-grid shell" aria-label="Additional profile details">
+<section class="details-grid is-single shell" aria-label="Additional profile details">
   <div class="detail-panel">
     <div class="section-heading compact-heading">
-      <p class="section-kicker">Recognition</p>
       <h2>Honors & Awards</h2>
     </div>
     <ul class="detail-list">
@@ -209,14 +202,4 @@ title: null
     </ul>
   </div>
 
-  <div class="detail-panel">
-    <div class="section-heading compact-heading">
-      <p class="section-kicker">What I work on</p>
-      <h2>Research Interests</h2>
-    </div>
-    <ul class="expertise-list">
-      {% for interest in site.data.research_interests %}<li>{{ interest }}</li>{% endfor %}
-    </ul>
-    {% if profile.personal %}<p class="personal-note">{{ profile.personal }}</p>{% endif %}
-  </div>
 </section>
