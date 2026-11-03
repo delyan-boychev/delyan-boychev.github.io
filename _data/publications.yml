@@ -46,6 +46,7 @@
   year: 2025
   type: "Workshop paper"
   venue: "AAAI 2025 Workshop on Datasets and Evaluators of AI Safety"
+  status: "Oral"
   link: "https://openreview.net/forum?id=1AtxTY2nPC"
   summary: "A balanced 200K-image benchmark spanning four content types and multiple open and proprietary generators, with strong contrastive-learning baselines."
   image: "/assets/img/publications/imaginet.webp"
