@@ -142,40 +142,6 @@ h3 { line-height: 1.2; }
   letter-spacing: -0.025em;
 }
 
-.hero-intro {
-  max-width: 660px;
-  margin-bottom: 1.15rem;
-  color: #3f4d5b;
-  font-size: 1.12rem;
-  font-style: italic;
-  line-height: 1.42;
-}
-
-.tldr-label {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 0.84em;
-  margin: 0 0.25rem 0 0;
-  padding: 0 0.16rem;
-  box-sizing: content-box;
-  background: $link;
-  color: #fff;
-  line-height: 1;
-  vertical-align: -0.08em;
-}
-
-.tldr-label svg {
-  display: block;
-  width: 2.55rem;
-  height: 0.72em;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.45;
-}
-
 .hero-bio {
   max-width: 700px;
   color: #333;
@@ -445,7 +411,7 @@ h3 { line-height: 1.2; }
   width: 44px;
   height: 44px;
   fill: none;
-  stroke: currentColor;
+  stroke: #9aa0a5;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.35;
