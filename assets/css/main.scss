@@ -570,7 +570,6 @@ h3 { line-height: 1.2; }
   text-align: right;
 }
 
-.details-grid { padding-bottom: 4rem; }
 .details-grid.is-single { grid-template-columns: minmax(0, 1fr); }
 
 .compact-heading { margin-bottom: 1rem; }
@@ -592,8 +591,42 @@ h3 { line-height: 1.2; }
   vertical-align: -0.1em;
 }
 
+/* Keep the icon on the same line as the honor's last word */
+.honor-tail { white-space: nowrap; }
+
 /* Icon-only link: nothing to underline */
 .honor-link:hover { text-decoration: none; }
+
+.media-section { padding-bottom: 4rem; }
+
+.media-group-title {
+  margin: 0 0 0.85rem;
+  font-weight: 700;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 3rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.media-grid:last-child { margin-bottom: 0; }
+
+.media-grid li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.media-meta {
+  display: block;
+  margin-top: 0.1rem;
+  color: $muted;
+  font-family: $sans;
+  font-size: 0.78rem;
+}
 
 .expertise-list {
   display: grid;
@@ -731,6 +764,8 @@ h3 { line-height: 1.2; }
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
+
+  .media-grid { grid-template-columns: 1fr; }
 
   /* Narrow columns justify with wide gaps; fall back to ragged-right */
   .hero-bio p {

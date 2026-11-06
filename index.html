@@ -199,8 +199,25 @@ title: null
     </div>
     <ul class="detail-list">
       {% capture external_icon %}{% include link-icon.html label='External' %}{% endcapture %}
-      {% for honor in site.data.honors %}<li>{{ honor.title }}{% if honor.url %}<a class="honor-link" href="{{ honor.url }}" aria-label="Source: {{ honor.title | escape }}">{{ external_icon | strip }}</a>{% endif %}</li>{% endfor %}
+      {% for honor in site.data.honors %}<li>{% if honor.url %}{% assign words = honor.title | split: ' ' %}{{ words | pop | join: ' ' }} <span class="honor-tail">{{ words | last }}<a class="honor-link" href="{{ honor.url }}" aria-label="Source: {{ honor.title | escape }}">{{ external_icon | strip }}</a></span>{% else %}{{ honor.title }}{% endif %}</li>{% endfor %}
     </ul>
   </div>
 
+</section>
+
+<section id="media" class="content-section media-section shell" aria-labelledby="media-title">
+  <div class="section-heading">
+    <h2 id="media-title">In the Media</h2>
+  </div>
+  {% assign media = site.data.media | sort: 'sort_key' | reverse %}
+  {% assign media_features = media | where: 'featured', true %}
+  {% assign media_news = media | where_exp: 'item', 'item.featured != true' %}
+  <h3 class="section-kicker media-group-title">Interviews &amp; Features</h3>
+  <ul class="media-grid">
+    {% for item in media_features %}{% include media-item.html item=item %}{% endfor %}
+  </ul>
+  <h3 class="section-kicker media-group-title">News</h3>
+  <ul class="media-grid">
+    {% for item in media_news %}{% include media-item.html item=item %}{% endfor %}
+  </ul>
 </section>

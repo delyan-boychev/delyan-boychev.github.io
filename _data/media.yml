@@ -1,0 +1,159 @@
+# ---------------------------------------------------------------------------
+# In the media — press, radio, TV and video coverage.
+# Shown newest first by `sort_key` (YYYY-MM-DD); file order does not matter.
+#
+#   title           English headline shown on the page (a translation for
+#                   non-English pieces)
+#   title_original  Headline as published, for non-English pieces (hover
+#                   tooltip and search-engine data)
+#   outlet          Publisher or programme
+#   type            Short label shown after the outlet
+#   format          article | radio | tv | video (search-engine data only)
+#   featured        true for interviews, features and videos about you; they
+#                   are listed under "Interviews & Features", the rest under "News"
+#   lang            Language of the piece: bg, en, ...
+#   date            Text displayed on the page (same spelling rules as the
+#                   rest of the site: Jan., Feb., ..., May, June, July, Sept.)
+# ---------------------------------------------------------------------------
+
+- title: "EUCYS – Synthetic image detection via supervised contrastive learning"
+  outlet: "Katowice – European City of Science"
+  type: "Project video"
+  format: "video"
+  lang: "en"
+  date: "Mar. 2025"
+  sort_key: "2025-03-28"
+  url: "https://www.youtube.com/watch?v=WdQ1lQ5Tt9I"
+  featured: true
+
+- title: "New stage of the Sofia University and INSAIT programme to keep young talent in Bulgaria"
+  title_original: "Представяне на новия етап от програмата на Софийския университет и Института INSAIT за задържане на млади таланти в България"
+  outlet: "Sofia University"
+  type: "University news"
+  format: "article"
+  lang: "bg"
+  date: "Jan. 2025"
+  sort_key: "2025-01-30"
+  url: "https://www.uni-sofia.bg/index.php/bul/novini/novini_i_s_bitiya/predstavyane_na_noviya_etap_ot_programata_na_sofijskiya_universitet_i_instituta_insait_za_zad_rzhane_na_mladi_talanti_v_b_lgariya"
+
+- title: "Bulgarian student won first prize in the EU Contest for Young Scientists and will visit Nobel Week"
+  outlet: "BNT"
+  type: "News"
+  format: "article"
+  lang: "en"
+  date: "Sept. 2024"
+  sort_key: "2024-09-17"
+  url: "https://bnt.bg/news/bulgarian-student-won-first-prize-in-the-eu-contest-for-young-scientists-and-will-visit-nobel-week-332011news.html"
+
+- title: "Bulgarian students honoured at the first International Olympiad in Artificial Intelligence"
+  title_original: "Български ученици бяха отличени на първата Международната олимпиада по изкуствен интелект"
+  outlet: "Sofia Tech Park"
+  type: "News"
+  format: "article"
+  lang: "bg"
+  date: "Aug. 2024"
+  sort_key: "2024-08-16"
+  url: "https://sofiatech.bg/news/balgarski-uchenitsi-byaha-otlicheni-na-parvata-mezhdunarodnata-olimpiada-po-izkustven-intelekt/"
+
+- title: "Aleksandra Petkova, Stefan Gaydarov and Delyan Boychev win the Ministry of Education’s “Young Talents” 2024 contest"
+  title_original: "Александра Петкова, Стефан Гайдаров и Делян Бойчев спечелиха конкурса „Млади таланти“ 2024 на МОН"
+  outlet: "Media Bricks"
+  type: "News"
+  format: "article"
+  lang: "bg"
+  date: "Apr. 2024"
+  sort_key: "2024-04-19"
+  url: "https://mediabricks.bg/aleksandra-petkova-stefan-gajdarov-i-delyan-bojchev-specheliha-konkursa-mladi-talanti-2024-na-mon/"
+
+- title: "The AI Detective: Can Technology Give Us Back the Truth?"
+  outlet: "Digital Stories by Georgi Karamanev"
+  type: "Feature"
+  format: "article"
+  lang: "en"  # official English edition; Bulgarian original: https://karamanev.me/technologii/radostin-cholakov-delian-boichev
+  date: "Apr. 2024"
+  sort_key: "2024-04-05"
+  url: "https://karamanev.me/en/technology/ai-detective-can-technology-restore-truth"
+  featured: true
+
+- title: "Delyan Boychev: Bulgaria can become a leading force in informatics"
+  title_original: "Делян Бойчев: България може да стане водеща сила в информатиката"
+  outlet: "BNR Horizont"
+  type: "Radio interview"
+  format: "radio"
+  lang: "bg"
+  date: "Dec. 2023"
+  sort_key: "2023-12-28"
+  url: "https://bnrnews.bg/horizont/post/270855/delyan-boychev-balgariya-mozhe-da-stane-vodeshta-sila-v-informatikata"
+  featured: true
+
+- title: "Eureka – Code: Science"
+  title_original: "Еврика – Код: Наука"
+  outlet: "bTV Reporters"
+  type: "TV report"
+  format: "tv"
+  lang: "bg"
+  date: "Nov. 2023"
+  sort_key: "2023-11-04"
+  url: "https://www.btv.bg/shows/btv-reporterite/videos/btv-reporterite-evrika-kod-nauka.html"
+  featured: true
+
+- title: "President Rumen Radev presents the John Atanasoff awards for 2023"
+  title_original: "Президентът Румен Радев връчи наградите „Джон Атанасов“ за 2023 г."
+  outlet: "Institute of Mathematics and Informatics, BAS"
+  type: "News"
+  format: "article"
+  lang: "bg"
+  date: "Oct. 2023"
+  sort_key: "2023-10-05"
+  url: "https://math.bas.bg/nagrada-jihn-atanasoff-2023-nagradeni/"
+
+- title: "Our students win distinctions at the largest science and engineering competition"
+  title_original: "Наши ученици с отличия от най-голямото състезание за наука и инженерство"
+  outlet: "Azbuki"
+  type: "News"
+  format: "article"
+  lang: "bg"
+  date: "May 2023"
+  sort_key: "2023-05-25"
+  url: "https://azbuki.bg/news/novini-2023/broj-21-2023/nashi-ucheniczi-s-otlichiya-ot-naj-golyamoto-sastezanie-za-nauka-i-inzhenerstvo/"
+
+- title: "EXPLORER – the programme that keeps talent in Bulgaria"
+  title_original: "EXPLORER – програмата, която задържа таланти в България"
+  outlet: "Azbuki"
+  type: "Interview"
+  format: "article"
+  lang: "bg"
+  date: "Oct. 2025"
+  sort_key: "2025-10-30"
+  url: "https://azbuki.bg/news/novini-2025/broj-43-30-10-05-11-2025-g/explorer-programata-koyato-zadarzha-talanti-v-balgariya/"
+  featured: true  # also republished (paywalled) by BTA: https://www.bta.bg/bg/news/lik/courier/998279-explorer-programata-koyato-zadarzha-talanti-v-balgariya
+
+- title: "Bulgaria’s A-team: joining the AI elite before turning 20"
+  title_original: "А-отборът на България: Да влезеш в елита на AI, преди да навършиш 20 г."
+  outlet: "Boulevard Bulgaria"
+  type: "Feature"
+  format: "article"
+  lang: "bg"
+  date: "Mar. 2025"
+  sort_key: "2025-03-01"
+  url: "https://boulevardbulgaria.bg/articles/a-otborat-na-balgariya-da-vlezesh-v-elita-na-ai-predi-da-navarshish-20-g"
+
+- title: "Who are INSAIT’s first scholarship recipients"
+  title_original: "Кои са първите стипендианти на INSAIT"
+  outlet: "OFFNews"
+  type: "News"
+  format: "article"
+  lang: "bg"
+  date: "June 2024"
+  sort_key: "2024-06-25"
+  url: "https://offnews.bg/obshtestvo/koi-sa-parvite-stipendianti-na-insait-825384.html"
+
+- title: "Our best AI students will represent Bulgaria at the International Olympiad in AI in China"
+  title_original: "Най-добрите ни ученици по ИИ ще представят България на Международната олимпиада по изкуствен интелект (IOAI) в Китай"
+  outlet: "Bulgarian Science Olympiad Teams Association"
+  type: "News"
+  format: "article"
+  lang: "bg"
+  date: "July 2025"
+  sort_key: "2025-07-29"
+  url: "https://olympicbg.org/naj-dobrite-ni-ucheniczi-po-ii-shhe-predstavyat-blgariya-na-mezhdunarodnata-olimpiada-po-izkustven-intelekt-ioai-v-kitaj/"

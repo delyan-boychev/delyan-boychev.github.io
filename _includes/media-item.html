@@ -1,0 +1,4 @@
+<li>
+  <a href="{{ include.item.url }}" hreflang="{{ include.item.lang }}"{% if include.item.title_original %} title="{{ include.item.title_original | escape }}"{% endif %}>{{ include.item.title }}</a>
+  <span class="media-meta">{{ include.item.outlet }} · {{ include.item.type }} · {{ include.item.date }}{% if include.item.lang == 'bg' %} · in Bulgarian{% endif %}</span>
+</li>
