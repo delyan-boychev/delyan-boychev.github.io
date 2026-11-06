@@ -580,6 +580,12 @@ h3 { line-height: 1.2; }
   font-size: 0.9rem;
 }
 
+.honor-link {
+  display: inline-flex;
+  margin-left: 0.35rem;
+  vertical-align: -0.1em;
+}
+
 .expertise-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

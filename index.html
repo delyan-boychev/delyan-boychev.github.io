@@ -198,7 +198,7 @@ title: null
       <h2>Honors & Awards</h2>
     </div>
     <ul class="detail-list">
-      {% for honor in site.data.honors %}<li>{{ honor }}</li>{% endfor %}
+      {% for honor in site.data.honors %}<li>{{ honor.title }}{% if honor.url %}<a class="honor-link" href="{{ honor.url }}" aria-label="Source: {{ honor.title | escape }}">{% include link-icon.html label='External' %}</a>{% endif %}</li>{% endfor %}
     </ul>
   </div>
 
