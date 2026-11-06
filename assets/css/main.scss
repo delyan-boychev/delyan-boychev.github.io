@@ -592,6 +592,9 @@ h3 { line-height: 1.2; }
   vertical-align: -0.1em;
 }
 
+/* Icon-only link: nothing to underline */
+.honor-link:hover { text-decoration: none; }
+
 .expertise-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
