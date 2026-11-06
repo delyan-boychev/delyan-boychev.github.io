@@ -147,7 +147,13 @@ h3 { line-height: 1.2; }
   color: #333;
 }
 
-.hero-bio p { margin-bottom: 0.6rem; }
+.hero-bio p {
+  margin-bottom: 0.6rem;
+  /* LaTeX-style justified paragraphs; hyphenation keeps word spacing even */
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 
 .profile-links,
 .item-links,
@@ -721,6 +727,13 @@ h3 { line-height: 1.2; }
   .hero {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  /* Narrow columns justify with wide gaps; fall back to ragged-right */
+  .hero-bio p {
+    text-align: left;
+    -webkit-hyphens: manual;
+    hyphens: manual;
   }
 
   .hero-copy { order: 2; }
